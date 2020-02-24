@@ -1,0 +1,15 @@
+t=0
+a=int(input())
+b=[]
+c=0
+d=bin(a)
+for i in d[2:]:
+    if i =='1':
+        c=c+1
+    if i =='0':
+        if c>t:
+            b.append(c)
+            c=0
+    if c==len(d)-2:
+        b.append(c)
+print(max(b))  
